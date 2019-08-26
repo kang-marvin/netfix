@@ -1,10 +1,12 @@
 import React from "react";
 import { Header } from "semantic-ui-react";
 
-import noImageFound from "../../images/noImageFound.png"
 import defaultImageHolder from "../../images/defaultImageHolder.png"
+import noImageFound from "../../images/noImageFound.png"
 
 import { headerData } from "../../data/headerData";
+
+import "../../styles/headerStyle.css";
 
 const HeaderComponent = _props => {
 
@@ -24,15 +26,15 @@ const HeaderComponent = _props => {
     const {titleName} = props;
     return (
       <div>
-        <p>{titleName}</p>
+        <p className="app-title">{titleName}</p>
       </div>
     )
   }
 
   return (
-    <div>
+    <div className="header-panel">
       <Header as="h1">
-        <Logo imageURL={defaultImageHolder} />
+        {/* <Logo imageURL={defaultImageHolder} /> */}
         <AppTitle titleName={headerData.appName} />
       </Header>
     </div>

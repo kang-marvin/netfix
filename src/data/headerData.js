@@ -1,3 +1,3 @@
 export const headerData = {
-  appName: "App"
+  appName: "Movies Counter"
 };
