@@ -6,9 +6,10 @@ import App from "./App";
 import authorizationUtils from "./utils/authorizationUtils";
 
 /** Import containers here */
+import APIStatus from "./containers/users/APIStatus";
 import ErrorComponent from "./containers/errors/ErrorComponent";
 import PublicComponent from "./containers/guests/PublicComponent";
-import APIStatus from "./containers/users/APIStatus";
+import AccountSwitcher from "./containers/accounts/AccountSwitcher";
 
 const routes = state => {
   /* https://tylermcginnis.com/react-router-protected-routes-authentication/ */
@@ -39,6 +40,11 @@ const routes = state => {
           path="/public"
           component={PublicComponent}
         />
+        {/* Root Path */}
+        <Route
+          exact
+          path="/"
+          component={AccountSwitcher} />
         {/* Error Handling Routes */}
         <Route
           component={ErrorComponent}

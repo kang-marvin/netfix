@@ -1,0 +1,45 @@
+/* Classes */
+
+.account-switcher-panel {
+  margin: 0 auto;
+  padding: 4rem;
+  text-align: center;
+}
+
+.whos-watching-text {
+  font-size: 3.5vw;
+}
+
+.list-profiles {
+  list-style-type: none;
+  width: inherit;
+  display: inline-flex;
+}
+
+.img-user-profile-thumbnail {
+  border-radius: .2rem;
+  height: 12rem;
+  width: 12rem;
+}
+
+.user-profile-username {
+  display: block;
+  font-size: 1.3vw;
+  margin: .2em 0;
+  text-align: center;
+}
+
+/* IDs */
+
+/* Override existing */
+
+.list-profiles > li {
+  padding: 1rem;
+  margin: 0rem auto;
+}
+
+.list-profiles > li > div {
+  border: .3em solid rgba(0,0,0,.4);
+}
+
+/* HTML keywords */
