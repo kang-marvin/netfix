@@ -7,10 +7,10 @@
 /* HTML keywords */
 
 body {
-  background-color: white;
+  background-color: black;
   height: 100%;
 }
 
 p, span {
-  color: black;
+  color: white;
 }
