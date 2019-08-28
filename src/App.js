@@ -19,7 +19,6 @@ const App = props => {
         <div className="container-fluid">
           {children}
         </div>
-        <p>Footer</p>
       </div>
     </BrowserRouter>
   );

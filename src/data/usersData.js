@@ -1,6 +1,6 @@
 export const usersData = {
 
-  whoseIsWatchingText: "Whose's Watching",
+  whoseIsWatchingText: "Who's Watching?",
   availableUsersLimit: 5,
   manageProfileButton: "Manage Profiles",
   users: [
