@@ -1,4 +1,6 @@
 import React from "react";
+import { MDBBtn } from "mdbreact";
+import { Button } from "semantic-ui-react";
 
 import UserProfile from "../../components/common/UserProfile";
 
@@ -28,6 +30,11 @@ class AccountSwitcher extends React.Component {
                 )
             })
           }
+        </div>
+        <div>
+          <MDBBtn outline color="white" className="manage-profiles-button">
+            { usersData.manageProfileButton }
+          </MDBBtn>
         </div>
       </div>
     )
