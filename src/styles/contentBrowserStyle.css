@@ -1,0 +1,22 @@
+/* Classes */
+
+.category-name-panel {
+  padding: 2rem 2rem;
+  /* background-color: aqua; */
+  display: inherit;
+  margin: 2rem;
+}
+
+.content-count {
+  float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+/* IDs */
+
+/* Override existing */
+
+/* HTML keywords */

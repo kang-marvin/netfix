@@ -3,6 +3,8 @@ import React from "react"
 import { contentBrowserData } from "../../data/contentBrowserData";
 
 import ListCategoryContent from "../../components/browser/ListCategoryContent";
+
+import "../../styles/contentBrowserStyle.css";
 class ContentBrowser extends React.Component {
 
   render() {
