@@ -1,6 +1,5 @@
 import React from "react";
 import { MDBBtn } from "mdbreact";
-import { Button } from "semantic-ui-react";
 
 import UserProfile from "../../components/common/UserProfile";
 

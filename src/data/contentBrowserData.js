@@ -1,4 +1,4 @@
-export default contentBrowserData = {
+export const contentBrowserData = {
   minimumViewableContentInRow: 3,
   maximumViewableContentInRow: 6,
   availableContentCategories: [
