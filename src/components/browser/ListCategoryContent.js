@@ -1,5 +1,7 @@
 import React from "react"
 
+import contentUtils from "../../utils/contentUtils";
+
 const uuidv4 = require("uuid/v4");
 const defaultContentCount = 0;
 
@@ -20,6 +22,15 @@ const ListCategoryContent = props => {
     )
   }
 
+  const ListContentOfCategory = props => {
+    return (
+      <div>
+        <p>{ props.categoryID }</p>
+        <p>Number of content available is { props.availableContent.length }</p>
+      </div>
+    )
+  }
+
   return (
     <div>
       {Object
@@ -27,13 +38,18 @@ const ListCategoryContent = props => {
         .map(categoryObject => {
           const {
             name,
-            contentCountOnRow
+            categoryID,
           } = categoryObject;
+          const categoryContent = contentUtils.filterByID(categoryID)
           return (
             <div key={uuidv4()}>
               <ShowCategoryName
                 name={name}
-                contentCount={contentCountOnRow || defaultContentCount}
+                contentCount={categoryContent.length || defaultContentCount}
+              />
+              <ListContentOfCategory
+                categoryID={categoryID}
+                availableContent={ categoryContent|| []}
               />
             </div>
           );
