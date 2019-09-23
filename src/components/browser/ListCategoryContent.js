@@ -14,7 +14,7 @@ const ListCategoryContent = props => {
   const ShowCategoryName = props => {
     return (
       <div key={uuidv4()} className="category-name-panel">
-        <p className="alignleft">{ props.name }</p>
+        <p className="alignleft category-name">{ props.name }</p>
         <p className="content-count">{ props.contentCount }</p>
       </div>
     )

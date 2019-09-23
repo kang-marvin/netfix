@@ -15,6 +15,12 @@
 	float: left;
 }
 
+.category-name {
+  vertical-align: bottom;
+  line-height: 1.25vw;
+  font-size: 1vw;
+}
+
 /* IDs */
 
 /* Override existing */
