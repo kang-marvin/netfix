@@ -1,6 +1,6 @@
 import React from "react"
 
-import { contentBrowserData } from "../../data/contentBrowserData";
+import { categoryBrowserData } from "../../data/categoryBrowserData";
 
 import ListCategoryContent from "../../components/browser/ListCategoryContent";
 
@@ -13,7 +13,7 @@ class ContentBrowser extends React.Component {
       minimumViewableContentInRow,
       maximumViewableContentInRow,
       availableContentCategories
-    } = contentBrowserData;
+    } = categoryBrowserData;
 
     return (
       <div>
