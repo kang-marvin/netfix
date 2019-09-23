@@ -6,11 +6,11 @@ export const contentBrowserData = {
     },
     {
       name: "Life Hunter",
-      categoryID: "101"
+      categoryID: "102"
     },
     {
       name: "Life Hunter",
-      categoryID: "101"
+      categoryID: "104"
     },
     {
       name: "Life Hunter",

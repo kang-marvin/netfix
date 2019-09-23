@@ -1,10 +1,16 @@
 /* Classes */
 
-.category-name-panel {
-  padding: 2rem 2rem;
-  /* background-color: aqua; */
-  display: inherit;
+.category-panel {
+  background-color: aqua;
+  display: grid;
+  padding: 2rem 5rem;
   margin: 2rem;
+}
+
+.category-panel > .category-content-panel {
+  display: flex;
+  background-color: cornsilk;
+  padding: 1.5rem;
 }
 
 .content-count {

@@ -13,9 +13,9 @@ const ListCategoryContent = props => {
     availableContentCategories
   } = props;
 
-  const ShowCategoryName = props => {
+  const CategoryInformation = props => {
     return (
-      <div key={uuidv4()} className="category-name-panel">
+      <div key={uuidv4()} className="category-information-panel">
         <p className="alignleft category-name">{ props.name }</p>
         <p className="content-count">{ props.contentCount }</p>
       </div>
@@ -23,11 +23,31 @@ const ListCategoryContent = props => {
   }
 
   const ListContentOfCategory = props => {
-    return (
-      <div>
-        <p>{ props.categoryID }</p>
-        <p>Number of content available is { props.availableContent.length }</p>
+    const {availableContent} = props;
+    return(
+      <div key={props.categoryID} className="category-content-panel">
+        {Object
+          .values(availableContent)
+          .map(contentObject => {
+            return (
+              <div>
+                <ContentInformation
+                  contentObject={contentObject}
+                />
+              </div>
+            )
+          }
+        )}
       </div>
+    )
+  }
+
+  const ContentInformation = props => {
+    const { contentObject } = props;
+    return (
+      <React.Fragment>
+        <p>{ contentObject.name }</p>
+      </React.Fragment>
     )
   }
 
@@ -42,8 +62,8 @@ const ListCategoryContent = props => {
           } = categoryObject;
           const categoryContent = contentUtils.filterByID(categoryID)
           return (
-            <div key={uuidv4()}>
-              <ShowCategoryName
+            <div key={uuidv4()} className="category-panel">
+              <CategoryInformation
                 name={name}
                 contentCount={categoryContent.length || defaultContentCount}
               />
@@ -56,7 +76,6 @@ const ListCategoryContent = props => {
         })
       }
     </div>
-
   );
 
 };
