@@ -1,6 +1,7 @@
 import React from "react"
 
 import contentUtils from "../../utils/contentUtils";
+import UserProfile from "../../components/common/UserProfile";
 
 const uuidv4 = require("uuid/v4");
 const defaultContentCount = 0;
@@ -30,10 +31,12 @@ const ListCategoryContent = props => {
           .values(availableContent)
           .map(contentObject => {
             return (
-              <div>
-                <ContentInformation
-                  contentObject={contentObject}
-                />
+              <div
+                className="content-panel"
+                key={uuidv4()}>
+                  <ContentInformation
+                    contentObject={contentObject}
+                  />
               </div>
             )
           }
@@ -44,9 +47,13 @@ const ListCategoryContent = props => {
 
   const ContentInformation = props => {
     const { contentObject } = props;
+    const user = {
+      imageProfile: '',
+      userName: contentObject.name
+    }
     return (
       <React.Fragment>
-        <p>{ contentObject.name }</p>
+        <UserProfile user={user} />
       </React.Fragment>
     )
   }
@@ -55,6 +62,9 @@ const ListCategoryContent = props => {
     <div>
       {Object
         .values(availableContentCategories)
+        .filter(categoryObject =>
+          contentUtils.filterByID(categoryObject.categoryID).length > 0
+        )
         .map(categoryObject => {
           const {
             name,

@@ -1,16 +1,21 @@
 /* Classes */
 
 .category-panel {
-  background-color: aqua;
   display: grid;
-  padding: 2rem 5rem;
   margin: 2rem;
+  padding: 2rem 8rem;
 }
 
 .category-panel > .category-content-panel {
-  display: flex;
   background-color: cornsilk;
+  overflow-x: auto;
   padding: 1.5rem;
+}
+
+.category-content-panel > .content-panel {
+  margin: 1rem;
+  padding: .5rem 2rem;
+  display: inline-grid;
 }
 
 .content-count {
